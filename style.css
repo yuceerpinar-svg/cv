@@ -390,3 +390,12 @@ body {
     body { background: white; padding: 0; }
     .page { box-shadow: none; border-radius: 0; }
 }
+
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
