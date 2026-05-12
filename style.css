@@ -1,6 +1,4 @@
 
- 
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -124,7 +122,6 @@ body {
     margin-bottom: 14px;
 }
 
-
 .contact-list {
     list-style: none;
     display: flex;
@@ -157,6 +154,7 @@ body {
 .contact-list a:hover {
     color: var(--gold);
 }
+
 
 .skill-category {
     font-size: 0.68rem;
@@ -214,7 +212,6 @@ body {
     flex-direction: column;
     gap: 0;
 }
-
 
 .section-title {
     font-family: 'Playfair Display', serif;
@@ -386,16 +383,34 @@ body {
 }
 
 
-@media print {
-    body { background: white; padding: 0; }
-    .page { box-shadow: none; border-radius: 0; }
-}
-
 @media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
     .page {
         flex-direction: column;
+        max-width: 100%;
+        border-radius: 0;
+        min-height: unset;
     }
     .sidebar {
         width: 100%;
+        padding: 32px 24px;
     }
+    .content {
+        padding: 32px 24px;
+    }
+    .competency-grid {
+        grid-template-columns: 1fr;
+    }
+    .edu-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+@media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; border-radius: 0; }
 }
